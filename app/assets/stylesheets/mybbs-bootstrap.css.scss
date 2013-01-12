@@ -1,0 +1,35 @@
+@import "bootstrap";
+@import "bootstrap-responsive";
+
+
+/* Customize bootstrap */
+div.navbar-inner {
+	border-radius: 0px;
+}
+
+h1 + ul {
+	margin-top: 5px;
+}
+
+ul.main-list {
+	list-style-type: none;	
+	margin-left: 0px;
+
+	li {
+	  background: white;
+	  border-radius: 4px;
+	  margin-top: 8px;
+	  margin-bottom: 8px;
+	  box-shadow: 0px 2px 3px #666;
+
+	  span, div {
+	    padding: 8px;
+	  }
+	}
+}
+
+ul.well {
+	padding: 8px 8px;
+	background: #eee;
+	border: 1px solid #ccc;
+}

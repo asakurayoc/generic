@@ -1,0 +1,23 @@
+<!-- <h1>Listing posts <%= link_to 'New Post', new_post_path, class: 'btn btn-small pull-right' %></h1> -->
+<h1>Listing posts <a href='/posts/new' class='btn btn-action btn-small pull-right'><i class='icon-plus'></i> Add Post</a></h1>
+
+<ul class='main-list well'>
+<% @posts.each do |post| %>
+  <li class='row-fluid'>
+    <div class='span6'><%= post.title %></div>
+    <!-- <span><%= post.body %></span> -->
+    <div class='pull-right'>
+      <!-- <%= link_to 'Show', post %> -->
+      <!-- <%= link_to 'Edit', edit_post_path(post) %> -->
+      <!-- <%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %> -->
+
+      <a href="<%= post_path(post) %>" class='btn btn-mini'><i class='icon-zoom-in'></i></a>
+      <a href="<%= edit_post_path(post) %>" class='btn btn-mini'><i class='icon-edit'></i></a>
+      <a href="<%= post_path(post) %>" class='btn btn-danger btn-mini' data-confirm='Are you sure?' data-method='delete' rel='nofollow'><i class='icon-remove'></i></a>
+    </div>
+  </li>
+<% end %>
+</ul>
+<br />
+
+
